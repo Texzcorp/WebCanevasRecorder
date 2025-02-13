@@ -1,0 +1,42 @@
+{
+  "name": "web-canvas-recorder",
+  "version": "1.0.0",
+  "description": "A simple and reusable module for recording HTML5 canvas content to video",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "canvas",
+    "recorder",
+    "video",
+    "html5",
+    "webrtc",
+    "screen-capture"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^3.20.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/web-canvas-recorder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/web-canvas-recorder/issues"
+  },
+  "homepage": "https://github.com/yourusername/web-canvas-recorder#readme"
+}
