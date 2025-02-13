@@ -2,6 +2,14 @@
 
 A simple and reusable JavaScript module to record HTML5 canvas content as MP4 video.
 
+## Why a Python server?
+
+The demo needs to be run through a web server (not by directly opening the HTML file) because:
+- Browser security restrictions require certain Web APIs (like MediaRecorder) to be run from a proper HTTP server
+- The server handles CORS headers which are needed for the recording functionality to work properly
+
+That's why we provide a simple Python server that you can use to test the demo.
+
 ## Demo
 
 To try out the demo:
@@ -22,6 +30,14 @@ python server.py
 5. Click "Stop Recording" when you're done, and the video will automatically download
 
 ## Basic Usage
+
+Remember that you need to serve your files through a web server (not open them directly as files) for the recording functionality to work properly.
+
+You can use any web server you prefer. For example:
+- Python: `python -m http.server`
+- Node.js: `npx http-server`
+- PHP: `php -S localhost:8000`
+- Or deploy to a proper web server
 
 ```javascript
 import { CanvasRecorder } from 'web-canvas-recorder';
