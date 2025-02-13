@@ -12,19 +12,14 @@ git clone https://github.com/yourusername/web-canvas-recorder.git
 cd web-canvas-recorder
 ```
 
-2. Open `index.html` in your browser
-3. Click the "Start Recording" button to begin recording the canvas animation
-4. Click "Stop Recording" when you're done, and the video will automatically download
-
-## Installation
-
-Add the package to your project using npm or yarn:
-
+2. Run the Python server:
 ```bash
-npm install web-canvas-recorder
-# or
-yarn add web-canvas-recorder
+python server.py
 ```
+
+3. Open your browser and navigate to the URL shown in the console
+4. Click the "Start Recording" button to begin recording the canvas animation
+5. Click "Stop Recording" when you're done, and the video will automatically download
 
 ## Basic Usage
 
@@ -49,7 +44,6 @@ const recorder = new CanvasRecorder(myCanvas, {
     fps: 60,                    // Frames per second (default: 60)
     videoBitrate: 8000000,      // Video bitrate in bps (default: 8Mbps)
     filename: 'my-video',       // Output filename without extension (default: timestamp)
-    mimeType: 'video/webm',     // Output format (default: video/mp4)
     autoDownload: true,         // Automatic download (default: true)
 });
 
@@ -130,7 +124,6 @@ interface RecorderOptions {
     fps?: number;              // Frames per second
     videoBitrate?: number;     // Video bitrate
     filename?: string;         // Output filename
-    mimeType?: string;         // Output format
     autoDownload?: boolean;    // Automatic download
 }
 ```
